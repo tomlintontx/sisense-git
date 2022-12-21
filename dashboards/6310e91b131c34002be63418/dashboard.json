@@ -53,7 +53,7 @@
         "schedule": "* * * * * *",
         "startAt": "2022-09-01",
         "subscribe": false,
-        "timezone": 360,
+        "timezone": 420,
         "type": "onUpdate",
         "tzName": "America/Boise"
     },

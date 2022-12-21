@@ -86,7 +86,7 @@
                             "datatype": "datetime",
                             "dim": "[TAMs (JIRA) - Tickets.csv.Created (Calendar)]",
                             "firstday": "mon",
-                            "level": "years",
+                            "level": "weeks",
                             "merged": true,
                             "table": "TAMs (JIRA) - Tickets.csv",
                             "title": "Weeks in Created"
@@ -226,6 +226,8 @@
         "selectorLocked": false,
         "triggersDomready": true
     },
+    "prevSortObjects": [
+    ],
     "realTimeRefreshing": false,
     "style": {
         "dataLimits": {
