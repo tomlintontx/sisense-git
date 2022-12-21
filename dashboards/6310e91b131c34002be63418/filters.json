@@ -1,0 +1,67 @@
+{
+    "defaultFilters": [
+        {
+            "instanceid": "993EE-4249-BC",
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Category",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aJira",
+                    "fullname": "localhost/Jira",
+                    "id": "localhost_aJira",
+                    "live": false,
+                    "title": "Jira"
+                },
+                "datatype": "text",
+                "dim": "[TAMs (JIRA) - Tickets.csv.Category]",
+                "filter": {
+                    "explicit": true,
+                    "members": [
+                        "Performance Issues"
+                    ],
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "locale": "en-us",
+                "merged": true,
+                "table": "TAMs (JIRA) - Tickets.csv",
+                "title": "Category"
+            }
+        }
+    ],
+    "filters": [
+        {
+            "isCascading": false,
+            "jaql": {
+                "collapsed": true,
+                "column": "Category",
+                "datasource": {
+                    "address": "LocalHost",
+                    "database": "aJira",
+                    "fullname": "localhost/Jira",
+                    "id": "localhost_aJira",
+                    "live": false,
+                    "title": "Jira"
+                },
+                "datatype": "text",
+                "dim": "[TAMs (JIRA) - Tickets.csv.Category]",
+                "filter": {
+                    "explicit": true,
+                    "members": [
+                        "Performance Issues"
+                    ],
+                    "multiSelection": true
+                },
+                "firstday": "mon",
+                "isDashboardFilter": true,
+                "locale": "en-us",
+                "merged": true,
+                "table": "TAMs (JIRA) - Tickets.csv",
+                "title": "Category"
+            }
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "buildDestination": {
+        "destination": "elasticube"
+    },
+    "datasets": [
+        "./6a6c06f0-54d3-4946-966e-064d007103b0/dataset.json",
+        "./d0a127c5-862f-4fb7-bdae-7df40e4b093d/dataset.json"
+    ],
+    "experiments": {
+    },
+    "fiscal": "system",
+    "oid": "6c9adc2b-c3f4-442b-8074-bf5e74cb2eb4",
+    "relationType": "regular",
+    "relations": "./relations.json",
+    "schemaId": null,
+    "title": "Jira",
+    "type": "extract"
+}

@@ -1,0 +1,380 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "continuousDates": false,
+    "dashboardid": "6310e91b131c34002be63418",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aJira",
+        "fullname": "LocalHost/Jira",
+        "id": "aLOCALHOST_aJIRA",
+        "title": "Jira"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 1,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "hasExcessiveSeries": false,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "continuous": false
+                        },
+                        "instanceid": "C0375-8643-E3",
+                        "jaql": {
+                            "column": "Assignee",
+                            "datatype": "text",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.Assignee]",
+                            "merged": true,
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "Assignee"
+                        }
+                    }
+                ],
+                "name": "categories"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "6D74E-E11A-A6",
+                        "jaql": {
+                            "context": {
+                                "[4DD6D-CC3]": {
+                                    "context": {
+                                        "[A4EC8-141]": {
+                                            "column": "Issue key",
+                                            "datatype": "text",
+                                            "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                                            "merged": true,
+                                            "table": "TAMs (JIRA) - Tickets.csv",
+                                            "title": "Issue Key"
+                                        }
+                                    },
+                                    "formula": "count([A4EC8-141])",
+                                    "title": "Issue Key",
+                                    "type": "measure"
+                                },
+                                "[CC978-BD3]": {
+                                    "collapsed": true,
+                                    "column": "Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aJira",
+                                        "fullname": "LocalHost/Jira",
+                                        "id": "aLOCALHOST_aJIRA",
+                                        "title": "Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[TAMs (JIRA) - Tickets.csv.Status]",
+                                    "filter": {
+                                        "exclude": {
+                                            "members": [
+                                                "Done"
+                                            ]
+                                        },
+                                        "explicit": false,
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "TAMs (JIRA) - Tickets.csv",
+                                    "title": "Status"
+                                }
+                            },
+                            "formula": "([4DD6D-CC3],[CC978-BD3])",
+                            "sort": "desc",
+                            "title": "Outstanding",
+                            "type": "measure"
+                        }
+                    },
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#9b9bd7",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": true,
+                                    "k": true,
+                                    "m": true,
+                                    "t": true
+                                },
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "BF798-2320-B7",
+                        "jaql": {
+                            "context": {
+                                "[81919-E8F]": {
+                                    "context": {
+                                        "[A4EC8-141]": {
+                                            "column": "Issue key",
+                                            "datatype": "text",
+                                            "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                                            "merged": true,
+                                            "table": "TAMs (JIRA) - Tickets.csv",
+                                            "title": "Issue Key"
+                                        }
+                                    },
+                                    "formula": "count([A4EC8-141])",
+                                    "title": "Issue Key",
+                                    "type": "measure"
+                                },
+                                "[BB9B0-900]": {
+                                    "collapsed": true,
+                                    "column": "Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aJira",
+                                        "fullname": "LocalHost/Jira",
+                                        "id": "aLOCALHOST_aJIRA",
+                                        "title": "Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[TAMs (JIRA) - Tickets.csv.Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "Done"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "TAMs (JIRA) - Tickets.csv",
+                                    "title": "Status"
+                                }
+                            },
+                            "formula": "([81919-E8F],[BB9B0-900])",
+                            "title": "Completed",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "break by"
+            },
+            {
+                "items": [
+                    {
+                        "instanceid": "DC827-26B3-F3",
+                        "jaql": {
+                            "collapsed": false,
+                            "column": "Labels",
+                            "datasource": {
+                                "address": "LocalHost",
+                                "database": "aJira",
+                                "fullname": "LocalHost/Jira",
+                                "id": "aLOCALHOST_aJIRA",
+                                "title": "Jira"
+                            },
+                            "datatype": "text",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.Labels]",
+                            "filter": {
+                                "doesntContain": "OOS"
+                            },
+                            "merged": true,
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "Labels"
+                        }
+                    }
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "nullAsZero": false,
+    "oid": "6310ee58131c34002be63435",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "drillToAnywhere": true,
+        "previousScrollerLocation": {
+            "max": 9,
+            "min": 0
+        },
+        "selector": true,
+        "selectorLocked": false,
+        "triggersDomready": true
+    },
+    "realTimeRefreshing": false,
+    "style": {
+        "dataLimits": {
+            "categoriesCapacity": 100000,
+            "seriesCapacity": 50
+        },
+        "legend": {
+            "enabled": true,
+            "position": "bottom"
+        },
+        "lineWidth": {
+            "width": "bold"
+        },
+        "markers": {
+            "enabled": false,
+            "fill": "filled",
+            "size": "small"
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "assignee",
+                    "plural": "Assignee",
+                    "singular": "Assignee",
+                    "title": "Assignee"
+                },
+                {
+                    "id": "labels",
+                    "plural": "Labels",
+                    "singular": "Labels",
+                    "title": "Labels"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "navigator": {
+            "enabled": true
+        },
+        "seriesLabels": {
+            "enabled": false,
+            "labels": {
+                "enabled": true,
+                "stacked": true,
+                "stackedPercentage": false,
+                "types": {
+                    "count": false,
+                    "percentage": false,
+                    "relative": false,
+                    "totals": false
+                }
+            },
+            "rotation": 0
+        },
+        "xAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "isIntervalEnabled": false,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "ticks": true,
+            "title": {
+                "enabled": false
+            },
+            "x2Title": {
+                "enabled": false
+            }
+        },
+        "y2Axis": {
+            "enabled": true,
+            "gridLines": false,
+            "hideMinMax": false,
+            "inactive": true,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        },
+        "yAxis": {
+            "enabled": true,
+            "gridLines": true,
+            "hideMinMax": false,
+            "inactive": false,
+            "isIntervalEnabled": true,
+            "labels": {
+                "enabled": true,
+                "rotation": 0
+            },
+            "logarithmic": false,
+            "ticks": true,
+            "title": {
+                "enabled": false
+            }
+        }
+    },
+    "subtype": "bar/stacked",
+    "title": "Assigned vs Completed",
+    "type": "chart/bar"
+}

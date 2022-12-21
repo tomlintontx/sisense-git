@@ -1,0 +1,10 @@
+{
+    "createdByUser": true,
+    "fileName": "TAMs (JIRA) - Tickets.csv",
+    "oid": "08699865-4a30-43b3-ab71-6158ba82fbdb",
+    "provider": "CSV",
+    "schema": "/opt/sisense/storage/datasets/storage/94/9458956f-ee5f-40de-a092-b6615d1c7fc0.csv",
+    "timeout": 300,
+    "uiParams": {
+    }
+}

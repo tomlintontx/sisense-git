@@ -1,0 +1,10 @@
+{
+    "createdByUser": true,
+    "fileName": "TAMs (JIRA) - Managers (1).csv",
+    "oid": "9c1a0ab8-dcdd-461b-b30c-85a00677566d",
+    "provider": "CSV",
+    "schema": "/opt/sisense/storage/datasets/storage/db/dbec2be4-0382-4c3a-a75b-c81e7d73f5a2.csv",
+    "timeout": 300,
+    "uiParams": {
+    }
+}

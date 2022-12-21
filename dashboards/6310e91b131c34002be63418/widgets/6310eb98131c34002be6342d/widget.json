@@ -1,0 +1,353 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "6310e91b131c34002be63418",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aJira",
+        "fullname": "localhost/Jira",
+        "id": "localhost_aJira",
+        "live": false,
+        "title": "Jira"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[TAMs (JIRA) - Tickets.csv.Reporter]",
+                            "index": 0
+                        },
+                        "instanceid": "3CA40-1F8C-8A",
+                        "jaql": {
+                            "column": "Reporter",
+                            "datatype": "text",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.Reporter]",
+                            "merged": true,
+                            "sort": null,
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "Reporter"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "rows"
+            },
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[TAMs (JIRA) - Tickets.csv.Issue key]_count",
+                            "index": 1
+                        },
+                        "format": {
+                            "color": {
+                                "color": "transparent",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "b": true,
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "t": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "69E39-2B75-55",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Issue key",
+                            "datatype": "text",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                            "merged": true,
+                            "sort": null,
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "Issues"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "field": {
+                            "id": "Contribution([ECC36-EEC])",
+                            "index": 2
+                        },
+                        "format": {
+                            "color": {
+                                "color": "transparent",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "decimals": "2",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "percent"
+                            }
+                        },
+                        "instanceid": "D8796-590A-DD",
+                        "jaql": {
+                            "context": {
+                                "[ECC36-EEC]": {
+                                    "agg": "count",
+                                    "column": "Issue key",
+                                    "datatype": "text",
+                                    "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                                    "merged": true,
+                                    "table": "TAMs (JIRA) - Tickets.csv",
+                                    "title": "# of unique Issue key"
+                                }
+                            },
+                            "datatype": "numeric",
+                            "formula": "Contribution([ECC36-EEC])",
+                            "sort": null,
+                            "title": "Contribution",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "field": {
+                            "id": "[TAMs (JIRA) - Tickets.csv.Issue key]_count",
+                            "index": 3
+                        },
+                        "format": {
+                            "color": {
+                                "color": "transparent",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "b": true,
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "t": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "69E39-2B75-55",
+                        "jaql": {
+                            "context": {
+                                "[4F42C-364]": {
+                                    "context": {
+                                        "[A4EC8-141]": {
+                                            "column": "Issue key",
+                                            "datatype": "text",
+                                            "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                                            "merged": true,
+                                            "table": "TAMs (JIRA) - Tickets.csv",
+                                            "title": "Issue Key"
+                                        }
+                                    },
+                                    "formula": "count([A4EC8-141])",
+                                    "title": "Issue Key",
+                                    "type": "measure"
+                                },
+                                "[D98D5-DB8]": {
+                                    "column": "Labels",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aJira",
+                                        "fullname": "localhost/Jira",
+                                        "id": "localhost_aJira",
+                                        "live": false,
+                                        "title": "Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[TAMs (JIRA) - Tickets.csv.Labels]",
+                                    "filter": {
+                                        "contains": "OOS"
+                                    },
+                                    "merged": true,
+                                    "table": "TAMs (JIRA) - Tickets.csv",
+                                    "title": "Labels"
+                                }
+                            },
+                            "datatype": "numeric",
+                            "formula": "([4F42C-364],[D98D5-DB8])",
+                            "sort": null,
+                            "title": "OOS Issues",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "field": {
+                            "id": "[881EF-998]/[558A0-010]",
+                            "index": 4
+                        },
+                        "format": {
+                            "color": {
+                                "conditions": [
+                                    {
+                                        "color": "#fc7570",
+                                        "expression": "0.8",
+                                        "operator": "<"
+                                    },
+                                    {
+                                        "color": "#fbb755",
+                                        "expression": "0.9",
+                                        "operator": "<"
+                                    },
+                                    {
+                                        "color": "#6eda55",
+                                        "expression": "1",
+                                        "operator": "≤"
+                                    }
+                                ],
+                                "type": "condition"
+                            },
+                            "mask": {
+                                "decimals": 0,
+                                "percent": true
+                            },
+                            "width": 159.8046875
+                        },
+                        "instanceid": "329BA-1375-50",
+                        "jaql": {
+                            "context": {
+                                "[3B5C7-825]": {
+                                    "context": {
+                                        "[A4EC8-141]": {
+                                            "column": "Issue key",
+                                            "datatype": "text",
+                                            "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                                            "merged": true,
+                                            "table": "TAMs (JIRA) - Tickets.csv",
+                                            "title": "Issue Key"
+                                        }
+                                    },
+                                    "formula": "count([A4EC8-141])",
+                                    "title": "Issue Key",
+                                    "type": "measure"
+                                },
+                                "[A03B5-D5C]": {
+                                    "context": {
+                                        "[163CB-48A]": {
+                                            "column": "Labels",
+                                            "datasource": {
+                                                "address": "LocalHost",
+                                                "database": "aJira",
+                                                "fullname": "localhost/Jira",
+                                                "id": "localhost_aJira",
+                                                "live": false,
+                                                "title": "Jira"
+                                            },
+                                            "datatype": "text",
+                                            "dim": "[TAMs (JIRA) - Tickets.csv.Labels]",
+                                            "filter": {
+                                                "contains": "OOS"
+                                            },
+                                            "merged": true,
+                                            "table": "TAMs (JIRA) - Tickets.csv",
+                                            "title": "Labels"
+                                        },
+                                        "[E9F04-A55]": {
+                                            "context": {
+                                                "[A4EC8-141]": {
+                                                    "column": "Issue key",
+                                                    "datatype": "text",
+                                                    "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                                                    "merged": true,
+                                                    "table": "TAMs (JIRA) - Tickets.csv",
+                                                    "title": "Issue Key"
+                                                }
+                                            },
+                                            "formula": "count([A4EC8-141])",
+                                            "title": "Issue Key",
+                                            "type": "measure"
+                                        }
+                                    },
+                                    "formula": "([E9F04-A55],[163CB-48A])",
+                                    "title": "OOS Issues",
+                                    "type": "measure"
+                                }
+                            },
+                            "datatype": "numeric",
+                            "formula": "1 -([A03B5-D5C]/[3B5C7-825])",
+                            "sort": "asc",
+                            "sortDetails": {
+                                "dir": "asc",
+                                "field": 4,
+                                "initialized": true,
+                                "isLastApplied": true,
+                                "sortingLastDimension": true
+                            },
+                            "title": "Valid Ticket Score",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "columns"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "6310eb98131c34002be6342d",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "imageColumns": [
+        ],
+        "selector": false,
+        "triggersDomready": true
+    },
+    "realTimeRefreshing": false,
+    "style": {
+        "automaticHeight": true,
+        "colors": {
+            "columns": false,
+            "headers": false,
+            "members": false,
+            "rows": true,
+            "totals": false
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "reporter",
+                    "plural": "Reporter",
+                    "singular": "Reporter",
+                    "title": "Reporter"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "pageSize": 25,
+        "rowsGrandTotal": true,
+        "scroll": false
+    },
+    "subtype": "pivot2",
+    "title": "Tickets by CSM",
+    "type": "pivot2"
+}

@@ -1,0 +1,215 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "continuousDates": false,
+    "dashboardid": "6310e91b131c34002be63418",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aJira",
+        "fullname": "LocalHost/Jira",
+        "id": "aLOCALHOST_aJIRA",
+        "title": "Jira"
+    },
+    "desc": null,
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "format": {
+                            "color": {
+                                "color": "#00cee6",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "A606C-B30C-0E",
+                        "jaql": {
+                            "context": {
+                                "[5D532-E03]": {
+                                    "collapsed": true,
+                                    "column": "Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aJira",
+                                        "fullname": "LocalHost/Jira",
+                                        "id": "aLOCALHOST_aJIRA",
+                                        "title": "Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[TAMs (JIRA) - Tickets.csv.Status]",
+                                    "filter": {
+                                        "explicit": true,
+                                        "members": [
+                                            "Done"
+                                        ],
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "TAMs (JIRA) - Tickets.csv",
+                                    "title": "Status"
+                                },
+                                "[D23EC-D0C]": {
+                                    "context": {
+                                        "[A4EC8-141]": {
+                                            "column": "Issue key",
+                                            "datatype": "text",
+                                            "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                                            "merged": true,
+                                            "table": "TAMs (JIRA) - Tickets.csv",
+                                            "title": "Issue Key"
+                                        }
+                                    },
+                                    "formula": "count([A4EC8-141])",
+                                    "title": "Issue Key",
+                                    "type": "measure"
+                                }
+                            },
+                            "formula": "([D23EC-D0C],[5D532-E03])",
+                            "title": "Completed Tickets",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "Metric"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "8188A-5C73-DC",
+                        "jaql": {
+                            "agg": "count",
+                            "column": "Issue key",
+                            "datatype": "text",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                            "merged": true,
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "# of unique Issue key"
+                        }
+                    }
+                ],
+                "name": "Denominator"
+            },
+            {
+                "items": [
+                    {
+                        "format": {
+                            "mask": {
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "FD7B5-210E-6C",
+                        "jaql": {
+                            "context": {
+                                "[260E9-99A]": {
+                                    "context": {
+                                        "[A4EC8-141]": {
+                                            "column": "Issue key",
+                                            "datatype": "text",
+                                            "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                                            "merged": true,
+                                            "table": "TAMs (JIRA) - Tickets.csv",
+                                            "title": "Issue Key"
+                                        }
+                                    },
+                                    "formula": "count([A4EC8-141])",
+                                    "title": "Issue Key",
+                                    "type": "measure"
+                                },
+                                "[88CB7-464]": {
+                                    "collapsed": true,
+                                    "column": "Status",
+                                    "datasource": {
+                                        "address": "LocalHost",
+                                        "database": "aJira",
+                                        "fullname": "LocalHost/Jira",
+                                        "id": "aLOCALHOST_aJIRA",
+                                        "title": "Jira"
+                                    },
+                                    "datatype": "text",
+                                    "dim": "[TAMs (JIRA) - Tickets.csv.Status]",
+                                    "filter": {
+                                        "exclude": {
+                                            "members": [
+                                                "Done"
+                                            ]
+                                        },
+                                        "explicit": false,
+                                        "multiSelection": true
+                                    },
+                                    "merged": true,
+                                    "table": "TAMs (JIRA) - Tickets.csv",
+                                    "title": "Status"
+                                }
+                            },
+                            "formula": "([260E9-99A],[88CB7-464])",
+                            "title": "Outstanding Tickets",
+                            "type": "measure"
+                        }
+                    }
+                ],
+                "name": "Secondary Value"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "nullAsZero": false,
+    "oid": "638a22086984f60036f0d09f",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "select",
+        "selector": false
+    },
+    "realTimeRefreshing": false,
+    "style": {
+        "color": "black",
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "postfix": " completed tickets",
+        "prefix": ""
+    },
+    "subtype": "ProgressMeter",
+    "title": "",
+    "type": "ProgressMeter"
+}

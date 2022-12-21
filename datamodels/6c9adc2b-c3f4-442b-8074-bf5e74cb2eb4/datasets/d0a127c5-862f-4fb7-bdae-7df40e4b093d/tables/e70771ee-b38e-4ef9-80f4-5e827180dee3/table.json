@@ -1,0 +1,52 @@
+{
+    "buildBehavior": {
+        "type": "sync"
+    },
+    "columns": [
+        {
+            "hidden": false,
+            "id": "CSM Manager",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CSM Manager",
+            "oid": "271aabd4-1f9f-4776-9457-90fa177485ae",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        },
+        {
+            "hidden": false,
+            "id": "CSM",
+            "indexed": true,
+            "isUpsertBy": false,
+            "name": "CSM",
+            "oid": "b29437bb-8025-468d-8148-b2b85712afdc",
+            "precision": 0,
+            "scale": 0,
+            "size": 0,
+            "type": 18
+        }
+    ],
+    "configOptions": {
+        "columnsDateTimePatterns": "{}",
+        "culture": "en-US",
+        "delimiter": ",",
+        "excludeIfBegins": "",
+        "excludeIfContains": "",
+        "hasHeader": true,
+        "ignoreFirstRows": "",
+        "ignoreMissingColumns": false,
+        "stringQuote": "\""
+    },
+    "dataset": "d0a127c5-862f-4fb7-bdae-7df40e4b093d",
+    "hidden": false,
+    "id": "dbec2be4-0382-4c3a-a75b-c81e7d73f5a2.csv",
+    "isMaterialized": false,
+    "name": "TAMs (JIRA) - Managers.csv",
+    "oid": "e70771ee-b38e-4ef9-80f4-5e827180dee3",
+    "schemaName": "/opt/sisense/storage/datasets/storage/db/dbec2be4-0382-4c3a-a75b-c81e7d73f5a2.csv",
+    "tupleTransformations": [
+    ],
+    "type": "base"
+}

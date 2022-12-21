@@ -1,0 +1,70 @@
+{
+    "allowChangeSubscription": false,
+    "dataExploration": false,
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aJira",
+        "fullname": "localhost/Jira",
+        "id": "localhost_aJira",
+        "live": false,
+        "title": "Jira"
+    },
+    "desc": "",
+    "filters": "./filters.json",
+    "hierarchies": [
+    ],
+    "layout": "./layout.json",
+    "oid": "6310e91b131c34002be63418",
+    "script": "./script.js",
+    "settings": {
+        "autoUpdateOnFiltersChange": true
+    },
+    "style": {
+        "name": "vivid",
+        "palette": {
+            "colors": [
+                "#00cee6",
+                "#9b9bd7",
+                "#6EDA55",
+                "#fc7570",
+                "#fbb755",
+                "#218A8C"
+            ],
+            "isSystem": true,
+            "name": "Vivid",
+            "sortOrder": 10,
+            "systemDefault": true
+        }
+    },
+    "subscription": {
+        "active": false,
+        "context": {
+            "dashboardid": "6310e91b131c34002be63418"
+        },
+        "emailSettings": {
+            "isEmail": true,
+            "isPdf": false
+        },
+        "executionPerDay": 1,
+        "isDataChange": true,
+        "reportType": {
+            "inline": true
+        },
+        "schedule": "* * * * * *",
+        "startAt": "2022-09-01",
+        "subscribe": false,
+        "timezone": 360,
+        "type": "onUpdate",
+        "tzName": "America/Boise"
+    },
+    "title": "Jira",
+    "widgets": [
+        "./widgets/6310e993131c34002be6341a/widget.json",
+        "./widgets/6310e9c8131c34002be63420/widget.json",
+        "./widgets/6310eb98131c34002be6342d/widget.json",
+        "./widgets/6310ee58131c34002be63435/widget.json",
+        "./widgets/63192659131c34002be63452/widget.json",
+        "./widgets/638a22086984f60036f0d09f/widget.json",
+        "./widgets/638a22136984f60036f0d0a1/widget.json"
+    ]
+}

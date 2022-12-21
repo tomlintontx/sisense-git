@@ -1,0 +1,294 @@
+{
+    "_dataSourcePermission": "owner",
+    "_toDisableOptionsList": {
+        "widgets": {
+            "duplicate": false
+        }
+    },
+    "dashboardid": "6310e91b131c34002be63418",
+    "datasource": {
+        "address": "LocalHost",
+        "database": "aJira",
+        "fullname": "localhost/Jira",
+        "id": "localhost_aJira",
+        "live": false,
+        "title": "Jira"
+    },
+    "desc": null,
+    "drillToDashboardConfig": {
+        "dashboardIds": [
+        ],
+        "displayDashboardsPane": true,
+        "displayFilterPane": true,
+        "displayHeaderRow": true,
+        "displayToolbarRow": true,
+        "drillToDashboardByName": false,
+        "drillToDashboardMenuCaption": "Jump to dashboard",
+        "drillToDashboardNavigateType": 2,
+        "drillToDashboardNavigateTypeCharts": 1,
+        "drillToDashboardNavigateTypeOthers": 3,
+        "drillToDashboardNavigateTypePivot": 2,
+        "drillToDashboardRightMenuCaption": "Jump to ",
+        "drilledDashboardDisplayType": 2,
+        "drilledDashboardPrefix": "_drill",
+        "drilledDashboardsFolderPrefix": "",
+        "excludeFilterDims": [
+        ],
+        "forceZeroInsteadNull": false,
+        "hideDrilledDashboards": true,
+        "hideSharedDashboardsForNonOwner": true,
+        "includeFilterDims": [
+        ],
+        "mergeTargetDashboardFilters": false,
+        "modalWindowResize": false,
+        "resetDashFiltersAfterJTD": false,
+        "sameCubeRestriction": true,
+        "sendPieChartMeasureFiltersOnClick": true,
+        "showFolderNameOnMenuSelection": false,
+        "showJTDIcon": true,
+        "volatile": false
+    },
+    "metadata": {
+        "ignore": {
+            "all": false,
+            "dimensions": [
+            ],
+            "ids": [
+            ]
+        },
+        "panels": [
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "[TAMs (JIRA) - Tickets.csv.Deployment Type]",
+                            "index": 0
+                        },
+                        "instanceid": "4FA3A-FC5C-BA",
+                        "jaql": {
+                            "column": "Deployment Type",
+                            "datatype": "text",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.Deployment Type]",
+                            "merged": true,
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "Deployment Type"
+                        },
+                        "panel": "rows"
+                    },
+                    {
+                        "field": {
+                            "id": "[TAMs (JIRA) - Tickets.csv.OS]",
+                            "index": 1
+                        },
+                        "instanceid": "1B70F-C231-D7",
+                        "jaql": {
+                            "column": "OS",
+                            "datatype": "text",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.OS]",
+                            "merged": true,
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "OS"
+                        },
+                        "panel": "rows"
+                    },
+                    {
+                        "field": {
+                            "id": "[TAMs (JIRA) - Tickets.csv.Summary]",
+                            "index": 2
+                        },
+                        "instanceid": "FC0F0-EB05-EC",
+                        "jaql": {
+                            "column": "Summary",
+                            "datatype": "text",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.Summary]",
+                            "merged": true,
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "Summary"
+                        },
+                        "panel": "rows"
+                    }
+                ],
+                "name": "rows"
+            },
+            {
+                "items": [
+                    {
+                        "field": {
+                            "id": "count([A4EC8-141])",
+                            "index": 3
+                        },
+                        "format": {
+                            "color": {
+                                "color": "transparent",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "b": true,
+                                "decimals": "auto",
+                                "isdefault": true,
+                                "separated": true,
+                                "t": true,
+                                "type": "number"
+                            }
+                        },
+                        "instanceid": "04E5E-5CC6-8F",
+                        "jaql": {
+                            "context": {
+                                "[A4EC8-141]": {
+                                    "column": "Issue key",
+                                    "datatype": "text",
+                                    "dim": "[TAMs (JIRA) - Tickets.csv.Issue key]",
+                                    "merged": true,
+                                    "table": "TAMs (JIRA) - Tickets.csv",
+                                    "title": "Issue Key"
+                                }
+                            },
+                            "datatype": "numeric",
+                            "formula": "count([A4EC8-141])",
+                            "title": "Issue Key",
+                            "type": "measure"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "field": {
+                            "id": "[TAMs (JIRA) - Tickets.csv.ACV]_avg",
+                            "index": 4
+                        },
+                        "format": {
+                            "color": {
+                                "color": "transparent",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 0
+                            }
+                        },
+                        "instanceid": "F2E63-4ABA-96",
+                        "jaql": {
+                            "agg": "avg",
+                            "column": "ACV",
+                            "datatype": "numeric",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.ACV]",
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "Average ACV"
+                        },
+                        "panel": "measures"
+                    },
+                    {
+                        "field": {
+                            "id": "[TAMs (JIRA) - Tickets.csv.ACV]_avg",
+                            "index": 5
+                        },
+                        "format": {
+                            "color": {
+                                "color": "transparent",
+                                "type": "color"
+                            },
+                            "mask": {
+                                "abbreviations": {
+                                    "b": false,
+                                    "k": false,
+                                    "m": false,
+                                    "t": false
+                                },
+                                "currency": {
+                                    "position": "pre",
+                                    "symbol": "$"
+                                },
+                                "decimals": 0
+                            }
+                        },
+                        "instanceid": "F2E63-4ABA-96",
+                        "jaql": {
+                            "agg": "median",
+                            "column": "ACV",
+                            "datatype": "numeric",
+                            "dim": "[TAMs (JIRA) - Tickets.csv.ACV]",
+                            "table": "TAMs (JIRA) - Tickets.csv",
+                            "title": "Median of ACV"
+                        },
+                        "panel": "measures"
+                    }
+                ],
+                "name": "values"
+            },
+            {
+                "items": [
+                ],
+                "name": "columns"
+            },
+            {
+                "items": [
+                ],
+                "name": "filters"
+            }
+        ],
+        "usedFormulasMapping": {
+        }
+    },
+    "oid": "63192659131c34002be63452",
+    "options": {
+        "autoUpdateOnEveryChange": true,
+        "dashboardFiltersMode": "filter",
+        "drillToAnywhere": true,
+        "selector": false,
+        "triggersDomready": true
+    },
+    "realTimeRefreshing": false,
+    "script": "",
+    "script_old": "",
+    "style": {
+        "automaticHeight": true,
+        "colors": {
+            "columns": false,
+            "headers": false,
+            "members": false,
+            "rows": true,
+            "totals": false
+        },
+        "narration": {
+            "aggregation": "sum",
+            "display": "above",
+            "enabled": false,
+            "format": "bullets",
+            "labels": [
+                {
+                    "id": "deployment_type",
+                    "plural": "Deployment Type",
+                    "singular": "Deployment Type",
+                    "title": "Deployment Type"
+                },
+                {
+                    "id": "os",
+                    "plural": "OS",
+                    "singular": "OS",
+                    "title": "OS"
+                },
+                {
+                    "id": "summary",
+                    "plural": "Summary",
+                    "singular": "Summary",
+                    "title": "Summary"
+                }
+            ],
+            "up_sentiment": "good",
+            "verbosity": "medium"
+        },
+        "pageSize": 25,
+        "scroll": false
+    },
+    "subtype": "pivot2",
+    "title": "Tickets by Deployment Type",
+    "type": "pivot2"
+}
