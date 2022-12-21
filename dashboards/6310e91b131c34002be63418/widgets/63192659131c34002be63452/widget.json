@@ -246,7 +246,6 @@
         "triggersDomready": true
     },
     "realTimeRefreshing": false,
-    "script": "",
     "script_old": "",
     "style": {
         "automaticHeight": true,

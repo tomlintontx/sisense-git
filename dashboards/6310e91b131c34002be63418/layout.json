@@ -18,7 +18,7 @@
                                     }
                                 ],
                                 "index": 0,
-                                "pxlWidth": 595.5,
+                                "pxlWidth": 653.5,
                                 "stretchable": false,
                                 "width": 50
                             },
@@ -36,7 +36,7 @@
                                     }
                                 ],
                                 "index": 1,
-                                "pxlWidth": 595.5,
+                                "pxlWidth": 653.5,
                                 "stretchable": false,
                                 "width": 50
                             }
@@ -47,9 +47,9 @@
                             {
                                 "elements": [
                                     {
-                                        "autoHeight": "724px",
+                                        "autoHeight": "750px",
                                         "defaultWidth": 512,
-                                        "height": "724px",
+                                        "height": "750px",
                                         "maxHeight": 2048,
                                         "maxWidth": 2048,
                                         "minHeight": 128,
@@ -58,7 +58,7 @@
                                     }
                                 ],
                                 "index": 0,
-                                "pxlWidth": 595.5,
+                                "pxlWidth": 653.5,
                                 "stretchable": false,
                                 "width": 50
                             },
@@ -67,7 +67,7 @@
                                     {
                                         "autoHeight": "360px",
                                         "defaultWidth": 512,
-                                        "height": "724px",
+                                        "height": "750px",
                                         "maxHeight": 2048,
                                         "maxWidth": 2048,
                                         "minHeight": 128,
@@ -76,7 +76,7 @@
                                     }
                                 ],
                                 "index": 1,
-                                "pxlWidth": 595.5,
+                                "pxlWidth": 653.5,
                                 "stretchable": false,
                                 "width": 50
                             }
@@ -97,7 +97,7 @@
                                     }
                                 ],
                                 "index": 0,
-                                "pxlWidth": 1191,
+                                "pxlWidth": 1307,
                                 "stretchable": false,
                                 "width": 100
                             }
@@ -118,7 +118,7 @@
                                     }
                                 ],
                                 "index": 0,
-                                "pxlWidth": 595.5,
+                                "pxlWidth": 653.5,
                                 "stretchable": false,
                                 "width": 50
                             },
@@ -135,7 +135,7 @@
                                     }
                                 ],
                                 "index": 1,
-                                "pxlWidth": 595.5,
+                                "pxlWidth": 653.5,
                                 "stretchable": false,
                                 "width": 50
                             }
@@ -143,11 +143,20 @@
                     }
                 ],
                 "index": 0,
-                "pxlWidth": 1191,
+                "pxlWidth": 1307,
                 "width": 100
             }
         ],
         "container": {
+            "sizzle1671640332788": {
+                "undefined": {
+                    "parentNode": [
+                        73.31112289777067,
+                        29,
+                        true
+                    ]
+                }
+            }
         },
         "instanceid": "C03D8-0685-14",
         "type": "columnar"
